@@ -3,4 +3,7 @@ export class Song {
     genero: string;
     banda: string;
     link : string;
+    album: string;
+    lanzamiento: string;
+    img: string;
 }

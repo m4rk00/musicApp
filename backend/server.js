@@ -6,8 +6,9 @@ const path = require('path')
 
 // Conexion con la base de datos
 mongoose
-    .connect('mongodb://127.0.0.1:27017/music')
-    //.connect('mongodb+srv://pololt:1234@proyectosds02.lweq0.mongodb.net/empleadosds02?retryWrites=true&w=majority')
+//.connect('mongodb://127.0.0.1:27017/music')
+//.connect('mongodb+srv://pololt:1234@proyectosds02.lweq0.mongodb.net/empleadosds02?retryWrites=true&w=majority')
+    .connect('mongodb+srv://pololt:1234@appmusica.tiy7v.mongodb.net/music?retryWrites=true&w=majority')
     .then((x) => {
         console.log(`Conectado exitosamente a Mongo a la Base de Datos: "${x.connections[0].name}" `)
     })

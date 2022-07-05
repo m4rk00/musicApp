@@ -9,8 +9,9 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 })
 export class MusicService {
 
-  baseUri: string = 'http://localhost:4000/api';
+  //baseUri: string = 'http://localhost:4000/api';
   //baseUri: string = 'https://empleadosds02-marco.herokuapp.com/api'
+  baseUri: string = 'https://app-musica-ds02sv21.herokuapp.com/api'
   headers = new HttpHeaders().set('Content-Type' , 'application/json');
 
   constructor(private http:HttpClient) { }
@@ -27,7 +28,7 @@ export class MusicService {
     return this.http.get(url);
   }
 
-  //método que obtiene un solo empleado por su id
+  //método que obtiene una sola cancion por su id
   getSong(id):Observable<any>{
     let url = `${this.baseUri}/song/${id}`;
     return this.http.get(url, {headers: this.headers}).pipe(
@@ -38,7 +39,7 @@ export class MusicService {
     );
   }
 
-  //método para actualizar un empleado
+  //método para actualizar una cancion
   updateSong(id,data):Observable<any>{
     let url = `${this.baseUri}/update/${id}`;
     return this.http.put(url,data,{headers: this.headers}).pipe(
@@ -46,7 +47,7 @@ export class MusicService {
     );
   }
 
-  //método para eliminar empleados
+  //método para eliminar canciones
   deleteSong(id): Observable<any> {
     let url = `${this.baseUri}/delete/${id}`;
     return this.http.delete(url, { headers: this.headers }).pipe(
