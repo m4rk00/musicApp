@@ -12,7 +12,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class EditarCancionComponent implements OnInit {
 //propiedades
 enviado = false;
-empleadoDepartamento: any = ['Administracion','Finanzas','Recursos Humanos','TI','Ventas'];
+//empleadoDepartamento: any = ['Administracion','Finanzas','Recursos Humanos','TI','Ventas'];
 editarForm: FormGroup;
 empleadoData: Song[];
 
@@ -32,6 +32,9 @@ empleadoData: Song[];
       genero:['',[Validators.required]],
       banda:['',[Validators.required]],
       link:['',[Validators.required]],
+      album:['',[Validators.required]],
+      lanzamiento:['',[Validators.required]],
+      img:['',[Validators.required]],
     });
   }
 
@@ -42,6 +45,9 @@ empleadoData: Song[];
         genero:['',[Validators.required]],
         banda:['',[Validators.required]],
         link:['',[Validators.required]],
+        album:['',[Validators.required]],
+        lanzamiento:['',[Validators.required]],
+        img:['',[Validators.required]],
     }
     );
   }
@@ -59,6 +65,9 @@ empleadoData: Song[];
         genero: data['genero'],
         banda: data['banda'],
         link: data['link'],
+        album: data['album'],
+        lanzamiento: data['lanzamiento'],
+        img: data['img']
       });
     });
   }

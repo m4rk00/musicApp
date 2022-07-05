@@ -1,5 +1,5 @@
 <body style="color: white ;">
-    <h2>Crear Cancion</h2>
+    <h2>Editar Cancion</h2>
 
     <div class="row justify-content-center">
         <div class="col-md-4">
@@ -51,12 +51,56 @@
                         </div>
                     </div>
 
+                    <div class="form-group">
+                        <label for="album">Album</label>
+                        <input type="text" class="form-control" formControlName="album" />
+                        <!-- Error de validacion -->
+                        <div style="color: red;" *ngIf="enviado && myForm['album'].errors?.['required']">
+
+                            * Este campo es obligatorio *
+
+                        </div>
+                    </div>
 
                     <div class="form-group">
+                        <label for="lanzamiento">Lanzamiento:</label>
+                        <input type="text" class="form-control" formControlName="lanzamiento" />
+                        <!-- Error de validacion -->
+                        <div style="color: red;" *ngIf="enviado && myForm['lanzamiento'].errors?.['required']">
+
+                            * Este campo es obligatorio *
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="img">Url de Portada:</label>
+                        <input type="text" class="form-control" formControlName="img" />
+                        <!-- Error de validacion -->
+                        <div style="color: red;" *ngIf="enviado && myForm['img'].errors?.['required']">
+
+                            * Este campo es obligatorio *
+
+                        </div>
+                    </div>
+
+                    <br/>
+                    <div class="form-group centrado">
+                        <div class="row">
+                            <div class="col-md-9 col-md-offset-9 col-xs-12 text-right">
+                                <div class="btn-group" role="group">
+                                    <button class="btn btn-outline-primary btn-lg btn-block" type="submit">Editar</button>
+                                    <button onclick="location.href='#/playlist'" class="btn btn-outline-danger btn-lg btn-block" type="button">Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-group">
                         <button class="btn btn-success btn-lg btn-block" type="submit">
                         Agregar
                     </button>
-                    </div>
+                    </div>-->
                 </form>
 
             </div>
@@ -65,11 +109,16 @@
 
     <style>
         body {
-            background: url(https://fondosmil.com/fondo/54336.png);
+            background: url(https://fondosmil.com/fondo/66146.jpg);
             background-size: cover;
             background-repeat: no-repeat;
             margin: 0;
             height: 89vh;
+        }
+        
+        .centrado {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </body>

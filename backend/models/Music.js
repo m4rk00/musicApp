@@ -13,6 +13,15 @@ let Song = new Schema({
     },
     link: {
         type: String
+    },
+    album: {
+        type: String
+    },
+    lanzamiento: {
+        type: String
+    },
+    img: {
+        type: String
     }
 }, {
     collection: 'song'

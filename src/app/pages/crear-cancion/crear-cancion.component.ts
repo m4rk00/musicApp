@@ -34,6 +34,9 @@ export class CrearCancionComponent implements OnInit {
             genero:['',[Validators.required]],
             banda:['',[Validators.required]],
             link:['',[Validators.required]],
+            album:['',[Validators.required]],
+            lanzamiento:['',[Validators.required]],
+            img:['',[Validators.required]],
       }
     );
   }
