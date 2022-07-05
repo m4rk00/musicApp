@@ -1,0 +1,75 @@
+<body style="color: white ;">
+    <h2>Crear Cancion</h2>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card-body">
+
+                <form [formGroup]="songForm" (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" formControlName="nombre" />
+                        <!-- Error de validacion -->
+                        <div style="color: red;" *ngIf="enviado && myForm['nombre'].errors?.['required']">
+
+                            * Este campo es obligatorio *
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Genero:</label>
+                        <input type="text" class="form-control" formControlName="genero" />
+                        <!-- Error de validacion -->
+                        <div style="color: red;" *ngIf="enviado && myForm['genero'].errors?.['required']">
+
+                            * Este campo es obligatorio *
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="banda">Artista(s):</label>
+                        <input type="text" class="form-control" formControlName="banda" />
+                        <!-- Error de validacion -->
+                        <div style="color: red;" *ngIf="enviado && myForm['banda'].errors?.['required']">
+
+                            * Este campo es obligatorio *
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="link">Link:</label>
+                        <input type="text" class="form-control" formControlName="link" />
+                        <!-- Error de validacion -->
+                        <div style="color: red;" *ngIf="enviado && myForm['link'].errors?.['required']">
+
+                            * Este campo es obligatorio *
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button class="btn btn-success btn-lg btn-block" type="submit">
+                        Agregar
+                    </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            background: url(https://fondosmil.com/fondo/54336.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 89vh;
+        }
+    </style>
+</body>
